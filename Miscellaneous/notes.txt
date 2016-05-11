@@ -1,0 +1,6 @@
+A virtual function is a special type of function that resolves to the most-derived version of the function with the same signature. This capability is known as polymorphism.
+
+/Only/ the MOST base class funcion eeds to be tagged as virtual for all the derived functions to work normally. However, having the keyword virtual on the derived function does not hurt and is good programming practice
+
+A /pointer to a function/ contains the functions adress in memory. An ARRAY's name is actually the ADDRESS in memory of the FIRST element
+Similarly, a functions name is actually the starting address in memory of the code that performs the functions task
