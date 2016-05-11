@@ -6,6 +6,8 @@
 #include <iostream>
 using namespace std;
 
+// By using virtual functions, it tells the program to go look and see if there are any more-derived versions of the function available.
+
 class Animal
 {
 	protected:
@@ -17,7 +19,7 @@ class Animal
 			: m_strName(strName) {}
 	public:
 		string getName() {return m_strName; }
-		const char * speak() { return "???"; }
+		virtual const char * speak() { return "???"; }
 };
 
 class Cat: public Animal
@@ -25,14 +27,14 @@ class Cat: public Animal
 	public:
 		Cat(string strName)
 			: Animal(strName) {}
-		const char * speak() { return "Meow";}
+		virtual const char * speak() { return "Meow";}
 };
 
 class Dog: public Animal
 {
 	public: Dog(string strName)
 		: Animal(strName) {}
-		const char * speak() { return "Woof";}
+		virtual const char * speak() { return "Woof";}
 };
 
 int main()
