@@ -51,5 +51,20 @@ int main()
 	pAnimal = &cDog;
 	cout << "pAnimal is named " << pAnimal->getName() << ", and it says " << pAnimal->speak() << endl;
 
+	// Make a quick break
+	for (int i = 0; i < 40; i++)
+		cout << "-";
+
+	cout << endl;
+	// End break
+	// Practice with array and pointers and references to make sure virtual functions are working properly
+	Cat cFred("Fred"), cTyson("Tyson"), cZeke("Zeke");
+	Dog cGarbo("Garbo"), cPooky("Pooky"), cTruffle("Truffle");
+
+	// Setup array of pointers to animals, and set those pointers to our cat and dog objects
+	Animal *apcAnimals[] = {&cFred, &cGarbo, &cPooky, &cTruffle, &cTyson, &cZeke};
+	for (int iii=0; iii < 6; iii++)
+		cout << apcAnimals[iii]->getName() << " says " << apcAnimals[iii]->speak() << endl;
+
 	return 0;
 }
