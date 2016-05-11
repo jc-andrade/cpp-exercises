@@ -18,13 +18,18 @@ class chihuahua: public dog
 {
 	public:
 		string bark() {return "yap yap";}
+		// add overloaded constructor
+		chihuahua(string n) {setname(n);}
 };
 
 int main()
 {
-	dog d;
-	chihuahua c;
+	dog d("Sparky");
+	chihuahua c("Chi chi");
 
-	cout << d.getname() << " goes " << d.bark() << endl;
-	cout << c.getname() << " goes " << c.bark() << endl;
+	cout << d.getname() << " goes " << d.bark() << endl; // dog goes bark bark
+	cout << c.getname() << " goes " << c.bark() << endl; // dog goes yap yap
+	
+	// We fix by using overloaded constructor to provide name
+	
 }
